@@ -1,0 +1,21 @@
+<rulesxml>
+	<rules name="Default">
+		<rule type="duplicate" mode="All" range="10001">Duplicates</rule>
+	</rules>
+	<rules name="Australia">
+		<rule type="duplicate" mode="All" range="350-399">Duplicated Services</rule>
+	</rules>
+	<rules name="Germany">
+		<rule type="duplicate" mode="All" range="900-999">Duplicated Services</rule>
+		<rule type="marker" mode="TV" position="220">Sky</rule>
+		<rule type="marker" mode="TV" position="240">Sport</rule>
+		<rule type="marker" mode="TV" position="301">SD</rule>
+		<rule type="marker" mode="TV" position="329">Regional</rule>
+		<rule type="marker" mode="TV" position="570">International</rule>
+		<rule type="marker" mode="TV" position="700">Sky Movie</rule>
+		<rule type="marker" mode="TV" position="750">Sky Sport</rule>
+	</rules>
+	<rules name="Italia">
+		<rule type="duplicate" mode="All" range="600-699"></rule>
+	</rules>
+</rulesxml>

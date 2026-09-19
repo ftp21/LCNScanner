@@ -1,0 +1,11 @@
+Package: enigma2-plugin-systemplugins-lcnscanner
+Version: 0.0.0
+Section: systemplugins
+Priority: optional
+Architecture: all
+Maintainer: ftp21 <https://github.com/ftp21>
+Source: https://github.com/ftp21/LCNScanner
+Description: LCN Scanner plugin per servizi DVB-C/T/T2
+ Analizza il database LCN e crea/aggiorna i bouquet in base ai canali
+ numerati (LCN), con risoluzione interattiva dei duplicati e scelta di
+ destinazione/posizione/nome del bouquet.

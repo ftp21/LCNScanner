@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LCNScanner\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+
+msgid "Show in Plugin Browser"
+msgstr "Mostra nell'elenco plugin"
+
+msgid "Select 'Yes' to show this plugin in the Plugin Browser."
+msgstr "Seleziona 'Sì' per mostrare questo plugin nell'elenco plugin."
+
+msgid "LCN rules"
+msgstr "Regole LCN"
+
+msgid "Select the list of LCN rules to be applied to the scan."
+msgstr "Seleziona l'elenco di regole LCN da applicare alla scansione."
+
+msgid "Bouquet destination"
+msgstr "Destinazione bouquet"
+
+msgid "Choose whether scanning creates a new bouquet or overwrites an existing one."
+msgstr "Scegli se la scansione deve creare un nuovo bouquet o sovrascriverne uno esistente."
+
+msgid "Bouquet position"
+msgstr "Posizione bouquet"
+
+msgid "Where a newly created bouquet is placed in the bouquet list."
+msgstr "Dove viene inserito nella lista bouquet un bouquet appena creato."
+
+msgid "Bouquet to overwrite"
+msgstr "Bouquet da sovrascrivere"
+
+msgid "The existing bouquet that will be overwritten by the scan."
+msgstr "Il bouquet esistente che verrà sovrascritto dalla scansione."
+
+msgid "Bouquet name (empty = automatic)"
+msgstr "Nome bouquet (vuoto = automatico)"
+
+msgid "Custom display name for a newly created bouquet. Leave empty to use the automatic name."
+msgstr "Nome visualizzato personalizzato per un bouquet appena creato. Lascia vuoto per usare il nome automatico."
+
+msgid "Use spacer lines"
+msgstr "Usa linee spaziatrici"
+
+msgid "Use spacer lines to pad the bouquet to make the #SERVICE line numbers match the LCN."
+msgstr "Usa linee spaziatrici per riempire il bouquet in modo che i numeri di riga #SERVICE corrispondano all'LCN."
+
+msgid "Add service names"
+msgstr "Aggiungi nomi dei servizi"
+
+msgid "Add service names to each #SERVICE entry."
+msgstr "Aggiungi il nome del servizio a ogni voce #SERVICE."
+
+msgid "Use description lines"
+msgstr "Usa linee di descrizione"
+
+msgid "Also use a #DESCRIPTION line after each #SERVICE line to hold the service's name."
+msgstr "Usa anche una riga #DESCRIPTION dopo ogni riga #SERVICE per contenere il nome del servizio."
+
+msgid "LCN Scanner Settings"
+msgstr "Impostazioni Scanner LCN"
+
+msgid "Create a new bouquet"
+msgstr "Crea un nuovo bouquet"
+
+msgid "Overwrite an existing bouquet"
+msgstr "Sovrascrivi un bouquet esistente"
+
+msgid "At the start of the bouquet list"
+msgstr "All'inizio della lista bouquet"
+
+msgid "At the end of the bouquet list"
+msgstr "Alla fine della lista bouquet"
+
+msgid "No existing bouquets found"
+msgstr "Nessun bouquet esistente trovato"
+
+msgid "Resolve duplicate LCNs"
+msgstr "Risolvi LCN duplicati"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Cancel uses the default (strongest signal) resolution for every duplicate."
+msgstr "Annulla usa la risoluzione predefinita (segnale più forte) per ogni duplicato."
+
+msgid "Discard changes and use the default (strongest signal) resolution"
+msgstr "Annulla le modifiche e usa la risoluzione predefinita (segnale più forte)"
+
+msgid "Save the selected duplicate resolutions"
+msgstr "Salva le risoluzioni dei duplicati selezionate"
+
+msgid "LCN Scanner Duplicates Actions"
+msgstr "Azioni duplicati Scanner LCN"
+
+msgid "Scan for terrestrial LCNs and create LCN bouquets"
+msgstr "Esegui la scansione degli LCN terrestri e crea i bouquet LCN"
+
+msgid "LCN Scanner Actions"
+msgstr "Azioni Scanner LCN"
+
+msgid "Scan"
+msgstr "Scansiona"
+
+msgid "No existing bouquets were found to overwrite."
+msgstr "Non è stato trovato nessun bouquet esistente da sovrascrivere."
+
+msgid "Please wait while LCN bouquets are created/updated..."
+msgstr "Attendere: creazione/aggiornamento dei bouquet LCN in corso..."
+
+msgid "Please wait while the LCN database is being analysed..."
+msgstr "Attendere: analisi del database LCN in corso..."
+
+msgid "LCN Scanner plugin for DVB-C/T/T2 services"
+msgstr "Plugin Scanner LCN per servizi DVB-C/T/T2"
+
+msgid "LCN Scanner"
+msgstr "Scanner LCN"

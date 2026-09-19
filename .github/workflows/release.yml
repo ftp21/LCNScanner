@@ -1,0 +1,46 @@
+name: Build and release ipk
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Versione da usare per una build manuale (es. 0.0.1-test)"
+        required: true
+        default: "0.0.1-test"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ipk
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION="${GITHUB_REF_NAME#v}"
+          fi
+          ./build-ipk.sh "$VERSION"
+
+      - name: Upload ipk artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lcnscanner-ipk
+          path: dist/*.ipk
+
+      - name: Create GitHub release
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" dist/*.ipk \
+            --title "${GITHUB_REF_NAME}" \
+            --generate-notes
