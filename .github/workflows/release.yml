@@ -50,7 +50,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FEED_DISPATCH_TOKEN }}
         run: |
-          gh api repos/ftp21/ftp21-feed/dispatches \
+          gh api repos/ftp21/enigma2-repo/dispatches \
             -f event_type=plugin_release \
             -f "client_payload[repo]=$GITHUB_REPOSITORY" \
             -f "client_payload[tag]=$GITHUB_REF_NAME" \
