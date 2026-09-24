@@ -44,3 +44,14 @@ jobs:
           gh release create "${GITHUB_REF_NAME}" dist/*.ipk \
             --title "${GITHUB_REF_NAME}" \
             --generate-notes
+
+      - name: Notify package feed
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.FEED_DISPATCH_TOKEN }}
+        run: |
+          gh api repos/ftp21/ftp21-feed/dispatches \
+            -f event_type=plugin_release \
+            -f "client_payload[repo]=$GITHUB_REPOSITORY" \
+            -f "client_payload[tag]=$GITHUB_REF_NAME" \
+            -f "client_payload[asset]=$(basename dist/*.ipk)"
