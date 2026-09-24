@@ -6,13 +6,24 @@
 #   - se la versione non e' passata come argomento, viene derivata dal tag
 #     git corrente (es. tag "v1.2.0" -> versione "1.2.0"); fallisce se non
 #     si e' esattamente su un tag e la versione non e' stata passata.
-# Output: dist/enigma2-plugin-systemplugins-lcnscanner_<versione>_all.ipk
+# Output: dist/enigma2-plugin-systemplugins-lcnscanner-extended_<versione>_all.ipk
+#
+# Il pacchetto si chiama "...-extended", non "enigma2-plugin-systemplugins-
+# lcnscanner" come l'ufficiale nei feed OpenATV, apposta: stesso nome
+# avrebbe fatto si' che un update dal feed ufficiale (con un numero di
+# versione piu' alto/uguale, dato che qui i tag non seguono lo schema di
+# release di OpenATV) sovrascrivesse silenziosamente questa versione, o che
+# opkg non la vedesse mai come "da aggiornare". Il percorso di installazione
+# (INSTALL_PATH sotto) resta INVECE quello ufficiale apposta: e' li' che
+# enigma2 la carica (Plugins.SystemPlugins.LCNScanner) ed e' il path che
+# altri plugin (es. SettingsHub) si aspettano - vedi Replaces/Conflicts nel
+# control file per dirlo esplicitamente a opkg.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-PKG_NAME="enigma2-plugin-systemplugins-lcnscanner"
+PKG_NAME="enigma2-plugin-systemplugins-lcnscanner-extended"
 INSTALL_PATH="usr/lib/enigma2/python/Plugins/SystemPlugins/LCNScanner"
 
 VERSION="${1:-}"
